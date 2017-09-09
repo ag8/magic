@@ -87,7 +87,7 @@ def simple_inputs(data_dir, batch_size):
     # area between the lock and the key.
     pairs_and_overlap_queue = tf.train.slice_input_producer([lock_files, key_files, overlap_areas],
                                                             capacity=100000,
-                                                            shuffle=False)
+                                                            shuffle=True)
 
     # print("Finished enqueueing")
 
@@ -118,7 +118,7 @@ def simple_inputs(data_dir, batch_size):
     return overlap_input._generate_image_and_label_batch(image=combined_example, label=overlap_area,
                                            min_queue_examples=min_queue_examples,
                                            batch_size=batch_size,
-                                           shuffle=False)
+                                           shuffle=True)
 
 
 def inputs(normalize=False, reshape=False, rotation=False):
