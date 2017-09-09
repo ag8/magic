@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ae4f8b4e-4f7a-4f5e-a8d3-6b04110fbb2c" name="Titan" url="http://titan.cba.mit.edu">
+        <fileTransfer host="titan.cba.mit.edu" port="22" rootFolder="/home/urops/andrewg" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
