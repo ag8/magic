@@ -185,7 +185,7 @@ with tf.Session() as sess:
     coord = tf.train.Coordinator()
     threads = tf.train.start_queue_runners(coord=coord, sess=sess)
 
-    for i in xrange(0, 20):
+    for i in xrange(0, 2):
         print("Getting batch of images and labels.")
 
         current_image_batch = images_batch.eval()

@@ -17,6 +17,21 @@ from constants import FLAGS
 from vae import TangoEncoder
 
 from utils import *
+import debugutils as dbu
+
+
+
+
+# Get the overlap areas, for testing later.
+max_overlap = []
+with open('/data/affinity/2d/overlap_micro/OVERLAP_AREAS') as fp:
+    max_overlap = pickle.load(fp)
+    print(max_overlap)
+
+
+# Get hashes of all the images, for testing later.
+image_hashes = dbu.generate_lock_hashes(FLAGS.DATA_DIR)
+
 
 # Load MNIST data in a format suited for tensorflow.
 # The script input_data is available under this URL:
@@ -29,11 +44,6 @@ from utils import *
 images_batch, labels_batch = overlap_input.inputs(normalize=True, reshape=True, rotation=FLAGS.ROTATE)
 n_samples = FLAGS.NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN
 
-
-max_overlap = []
-with open('/data/affinity/2d/overlap_micro/OVERLAP_AREAS') as fp:
-    max_overlap = pickle.load(fp)
-    print(max_overlap)
 
 
 class TrainingException(Exception):
@@ -51,8 +61,7 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
             # Loop over all batches
             for i in range(total_batch):
                 # batch_xs, _ = mnist.train.next_batch(batch_size)
-                batch_xs = images_batch.eval()
-                overlap_areas = labels_batch.eval()
+                batch_xs, overlap_areas = sess.run([images_batch, labels_batch])
 
 
                 # TESTING THAT THE BATCHES ARE CORRECT
@@ -98,8 +107,7 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
 
 
                 if i % 24 == 0:
-                    accuracy_testing_images = images_batch.eval()
-                    accuracy_testing_overlap_areas = labels_batch.eval()
+                    accuracy_testing_images, accuracy_testing_overlap_areas = sess.run([images_batch, labels_batch])
                     predictions = vae.get_predictions(accuracy_testing_images, overlap_areas=accuracy_testing_overlap_areas)
 
                     print("Labels batch: " + str(accuracy_testing_overlap_areas))
@@ -120,6 +128,9 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
                     reshaped_images = np.reshape(accuracy_testing_images, newshape=[FLAGS.BATCH_SIZE, FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, FLAGS.NUM_LAYERS])
 
                     ex_lock = reshaped_images[0, :, :, 0]
+                    scipy.misc.imsave("ex_lock.png", ex_lock)
+                    print(np.shape(ex_lock))
+                    print(sum(sum(ex_lock)))
                     ex_lock_r = reshaped_images[0, :, :, 1]
                     ex_key = reshaped_images[0, :, :, 2]
 
@@ -149,6 +160,10 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
                     print("Ok, guys. Here's the deal.")
                     print("The overlap index is " + str(max_overlap.index(accuracy_testing_overlap_areas[0])))
                     print("And the overlap itself is " + str(accuracy_testing_overlap_areas[0]) + ".")
+
+                    image_hash = dbu.lock_hash(ex_lock)
+                    image_index = image_hashes.index(image_hash)
+                    print("The image index, on the other hand, is " + str(image_index) + ".")
 
 
                     plt.tight_layout()

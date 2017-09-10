@@ -182,7 +182,7 @@ def _inputs_with_rotation(data_dir, batch_size):
     # area between the lock and the key.
     pairs_and_overlap_queue = tf.train.slice_input_producer([lock_files, key_files, overlap_areas],
                                                             capacity=100000,
-                                                            shuffle=True)
+                                                            shuffle=False)
 
     # print("Finished enqueueing")
 
@@ -213,7 +213,7 @@ def _inputs_with_rotation(data_dir, batch_size):
     return _generate_image_and_label_batch(image=combined_example, label=overlap_area,
                                            min_queue_examples=min_queue_examples,
                                            batch_size=batch_size,
-                                           shuffle=True)
+                                           shuffle=False)
 
 
 def _generate_image_and_label_batch(image, label, min_queue_examples,
