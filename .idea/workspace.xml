@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="995a2c6e-f93e-42c9-8740-27a66149c3ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/debugutils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/excps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/overlap_input.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/vae.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10a/main.py" afterPath="$PROJECT_DIR$/10a/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10a/vae.py" afterPath="$PROJECT_DIR$/10a/vae.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10b/main.py" afterPath="$PROJECT_DIR$/10b/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10b/vae.py" afterPath="$PROJECT_DIR$/10b/vae.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/10b/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="97" column="20" lean-forward="false" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+            <state relative-caret-position="447">
+              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="e#47#57#0" expanded="true" />
               </folding>
@@ -42,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vae.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vae.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/10b/vae.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+            <state relative-caret-position="440">
+              <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -55,7 +46,7 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/10b/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="47">
               <caret line="426" column="0" lean-forward="true" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
               <folding>
                 <element signature="e#47#56#0" expanded="true" />
@@ -113,6 +104,7 @@
       <find>AdamOpti</find>
       <find>learning_rates</find>
       <find>current cost</find>
+      <find>distance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,9 +128,9 @@
         <option value="$PROJECT_DIR$/10b/test.py" />
         <option value="$PROJECT_DIR$/10b/exceptions.py" />
         <option value="$PROJECT_DIR$/10b/constants.py" />
-        <option value="$PROJECT_DIR$/10b/vae.py" />
         <option value="$PROJECT_DIR$/10b/utils.py" />
         <option value="$PROJECT_DIR$/10b/main.py" />
+        <option value="$PROJECT_DIR$/10b/vae.py" />
       </list>
     </option>
   </component>
@@ -482,6 +474,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="995a2c6e-f93e-42c9-8740-27a66149c3ec" name="Default" comment="" />
@@ -793,17 +788,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/10b/vae.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/10b/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="47">
           <caret line="426" column="0" lean-forward="true" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
           <folding>
             <element signature="e#47#56#0" expanded="true" />
@@ -813,11 +800,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/10b/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="97" column="20" lean-forward="false" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+        <state relative-caret-position="447">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
           <folding>
             <element signature="e#47#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10b/vae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

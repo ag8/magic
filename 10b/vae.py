@@ -53,14 +53,15 @@ class TangoEncoder(object):
         # The transfer function to use
         # during training (usually tanh
         #   or softplus)
-        self.transfer_fct = tf.nn.tanh
+        # WAIT except softmax just magically works?!
+        self.transfer_fct = tf.nn.softmax
 
         # The learning rates for the two
         # AdamOptimizers. The first learning
         # rate is for the latent space
         # generation; the second is for the
         # metricization of the latent space.
-        self.learning_rates = [1e-4, 1e-8]
+        self.learning_rates = [1e-4, 1e-2]
 
         # The batch size for training
         self.batch_size = FLAGS.BATCH_SIZE
@@ -390,8 +391,8 @@ class TangoEncoder(object):
         # opt, cost = self.sess.run((self.optimizer, self.cost),
         #                            feed_dict={self.x: X})
 
-        opt, o_opt, cost, training_loss, rec_loss, lat_loss, def_loss = self.sess.run(
-            (self.optimizer, self.o_optimizer, self.cost, self.training_loss, self.r_l, self.l_l, self.d_l),
+        opt, o_opt, cost, training_loss, rec_loss, lat_loss, def_loss, distance = self.sess.run(
+            (self.optimizer, self.o_optimizer, self.cost, self.training_loss, self.r_l, self.l_l, self.d_l, self.distance),
             feed_dict={self.x            : X,
                        self.overlap_areas: overlap_areas})
 
@@ -402,7 +403,7 @@ class TangoEncoder(object):
         # print("Reconstruction loss: " + str(rec_loss) + "; latent loss: " + str(lat_loss) + "; deformation loss: " + str(def_loss) + ".")
 
         # return cost
-        return cost, training_loss, rec_loss, lat_loss, def_loss
+        return cost, training_loss, rec_loss, lat_loss, def_loss, distance
 
     def get_predictions(self, X, overlap_areas):
         return self.sess.run(self.distance, feed_dict={self.x: X, self.overlap_areas: overlap_areas})

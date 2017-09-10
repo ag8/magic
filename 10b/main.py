@@ -53,6 +53,8 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
     try:
         # Training cycle
         for epoch in range(training_epochs):
+            # print("Epoch: " + str(epoch))
+
             avg_cost = 0.
             avg_loss = 0.
             total_batch = int(n_samples / batch_size)
@@ -63,8 +65,13 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                 batch_xs, overlap_areas = sess.run([images_batch, labels_batch])
 
                 # Fit training using batch data
-                cost, training_loss, rec_loss, lat_loss, def_loss = vae.partial_fit(batch_xs,
+                cost, training_loss, rec_loss, lat_loss, def_loss, distance = vae.partial_fit(batch_xs,
                                                                                     overlap_areas=overlap_areas)
+
+                print(("Epoch: " + str(epoch)).ljust(20)),
+                print(("Cost: " + str(cost)).ljust(20)),
+                print(("Training loss: " + str(training_loss).ljust(30))),
+                print(("Distance: " + str(np.mean(distance))).ljust(20))
 
                 # If the cost is nan, stop training and raise an exception
                 if np.isnan(cost):
@@ -88,7 +95,15 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                     predictions = vae.get_predictions(accuracy_testing_images,
                                                       overlap_areas=accuracy_testing_overlap_areas)
 
-                    mse = ((predictions - accuracy_testing_overlap_areas) ** 2).mean(axis=None)
+
+                    # Invert the predictions--since the distance is the inverse
+                    # predictions = 1. / predictions
+
+
+                    print("Predictions: " + str(predictions))
+                    print("Actual areas: " + str(accuracy_testing_overlap_areas))
+
+                    mse = (np.array(predictions - accuracy_testing_overlap_areas) ** 2).mean(axis=None)
 
                     print("mse: " + str(mse) + "     "),
 
@@ -104,7 +119,7 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                 avg_cost += cost / n_samples * batch_size
                 avg_loss += training_loss / n_samples * batch_size
 
-                print(("Average loss per epoch: " + str(avg_loss) + "").ljust(35, ' '))
+            print(("Average loss per epoch: " + str(int(avg_loss)) + "").ljust(35, ' '))
 
     except KeyboardInterrupt:
         pass
