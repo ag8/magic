@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="995a2c6e-f93e-42c9-8740-27a66149c3ec" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/constants.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/debugutils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/excps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/main.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/overlap_input.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/10b/vae.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10a/main.py" afterPath="$PROJECT_DIR$/10a/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10a/overlap_input.py" afterPath="$PROJECT_DIR$/10a/overlap_input.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10a/vae.py" afterPath="$PROJECT_DIR$/10a/vae.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,16 +24,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/magic$test.coverage" NAME="test Coverage Results" MODIFIED="1505064724866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10b" />
     <SUITE FILE_PATH="coverage/magic$inputtest.coverage" NAME="inputtest Coverage Results" MODIFIED="1505055486888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/10a" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/10a/main.py">
+        <entry file="file://$PROJECT_DIR$/10b/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="126" column="64" lean-forward="false" selection-start-line="126" selection-start-column="64" selection-end-line="126" selection-end-column="64" />
+            <state relative-caret-position="487">
+              <caret line="97" column="20" lean-forward="false" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
               <folding>
                 <element signature="e#47#57#0" expanded="true" />
               </folding>
@@ -31,36 +42,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overlap_input.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/10a/overlap_input.py">
+      <file leaf-file-name="vae.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10b/vae.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="debugutils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/10a/debugutils.py">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10b/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+            <state relative-caret-position="107">
+              <caret line="426" column="0" lean-forward="true" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#47#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inputtest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/10a/inputtest.py">
+      <file leaf-file-name="excps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10b/excps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-              <folding>
-                <element signature="e#47#70#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="constants.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10b/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/10b/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,6 +109,10 @@
       <find>actual overl</find>
       <find>shuffle</find>
       <find>shuff</find>
+      <find>print</find>
+      <find>AdamOpti</find>
+      <find>learning_rates</find>
+      <find>current cost</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,6 +132,13 @@
         <option value="$PROJECT_DIR$/10a/inputtest.py" />
         <option value="$PROJECT_DIR$/10a/overlap_input.py" />
         <option value="$PROJECT_DIR$/10a/main.py" />
+        <option value="$PROJECT_DIR$/10a/vae.py" />
+        <option value="$PROJECT_DIR$/10b/test.py" />
+        <option value="$PROJECT_DIR$/10b/exceptions.py" />
+        <option value="$PROJECT_DIR$/10b/constants.py" />
+        <option value="$PROJECT_DIR$/10b/vae.py" />
+        <option value="$PROJECT_DIR$/10b/utils.py" />
+        <option value="$PROJECT_DIR$/10b/main.py" />
       </list>
     </option>
   </component>
@@ -154,6 +194,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="input_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="magic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="10b" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -224,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.inputtest">
+  <component name="RunManager" selected="Python.test">
     <configuration default="false" name="inputtest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,6 +293,25 @@
       <module name="magic" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10a/inputtest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/10b" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="magic" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10b/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -395,12 +468,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.inputtest" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.inputtest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.inputtest" />
       </list>
     </recent_temporary>
   </component>
@@ -595,22 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input_test/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10a/vae.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="302" column="21" lean-forward="false" selection-start-line="302" selection-start-column="21" selection-end-line="302" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input_test/s.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -643,13 +702,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/10a/inputtest.py">
+    <entry file="file://$PROJECT_DIR$/10a/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3040">
+          <caret line="152" column="38" lean-forward="false" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
+          <folding>
+            <element signature="e#47#57#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_test/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10a/overlap_input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="195" column="11" lean-forward="false" selection-start-line="195" selection-start-column="6" selection-end-line="195" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10a/vae.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1120">
-          <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-          <folding>
-            <element signature="e#47#70#0" expanded="true" />
-          </folding>
+          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -658,23 +741,80 @@
         <state relative-caret-position="662">
           <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/10a/overlap_input.py">
+    <entry file="file://$PROJECT_DIR$/10a/inputtest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        <state relative-caret-position="1120">
+          <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+          <folding>
+            <element signature="e#47#70#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_test/images.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10b/inputtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/10a/main.py">
+    <entry file="file://$PROJECT_DIR$/10b/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="126" column="64" lean-forward="false" selection-start-line="126" selection-start-column="64" selection-end-line="126" selection-end-column="64" />
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10b/excps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10b/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10b/vae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="48" column="35" lean-forward="true" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10b/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="426" column="0" lean-forward="true" selection-start-line="426" selection-start-column="0" selection-end-line="426" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10b/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="97" column="20" lean-forward="false" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
           <folding>
             <element signature="e#47#57#0" expanded="true" />
           </folding>

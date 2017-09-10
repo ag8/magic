@@ -1,0 +1,4 @@
+
+
+class TrainingException(Exception):
+    pass

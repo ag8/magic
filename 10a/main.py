@@ -106,11 +106,11 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
                     lat_loss) + ";").ljust(25, fill) + ("deformation loss: " + str(def_loss) + ".").ljust(27, fill) + "]")
 
 
-                if i % 24 == 0:
+                if i % 100 == 0:
                     accuracy_testing_images, accuracy_testing_overlap_areas = sess.run([images_batch, labels_batch])
                     predictions = vae.get_predictions(accuracy_testing_images, overlap_areas=accuracy_testing_overlap_areas)
 
-                    print("Labels batch: " + str(accuracy_testing_overlap_areas))
+                    # print("Labels batch: " + str(accuracy_testing_overlap_areas))
 
                     # print("Predictions: "),
                     # print(predictions)
@@ -119,20 +119,20 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
 
                     mse = ((predictions - accuracy_testing_overlap_areas) ** 2).mean(axis=None)
 
-                    print("mse: " + str(mse))
+                    print("mse: " + str(mse) + "     "),
 
 
 
 
-                    if i % 13 == 0:  # Every 312 runs seems good
+                    if i % 13 == 0:  # Every 1300 runs seems good
 
                         # Reshape images
                         reshaped_images = np.reshape(accuracy_testing_images, newshape=[FLAGS.BATCH_SIZE, FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, FLAGS.NUM_LAYERS])
 
                         ex_lock = reshaped_images[0, :, :, 0]
                         scipy.misc.imsave("ex_lock.png", ex_lock)
-                        print(np.shape(ex_lock))
-                        print(sum(sum(ex_lock)))
+                        # print(np.shape(ex_lock))
+                        # print(sum(sum(ex_lock)))
                         ex_lock_r = reshaped_images[0, :, :, 1]
                         ex_key = reshaped_images[0, :, :, 2]
 
@@ -163,12 +163,15 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
                         image_index = image_hashes.index(image_hash)
                         label_index = max_overlap.index(accuracy_testing_overlap_areas[0])
 
-                        assert image_index == label_index  # Make sure the image and label batches are shuffled identically
-                        print("Index: " + str(image_index))
+                        if image_index != label_index:  # Make sure the image and label batches are shuffled identically
+                            # raise ValueError("Indices do not match:  " + str(image_index) + " != " + str(label_index))
+                            print("Indices do not match:  " + str(image_index) + " != " + str(label_index))
+                        else:
+                            print("Index: " + str(image_index))
 
-                        plt.tight_layout()
+                            plt.tight_layout()
 
-                        plt.savefig('ex' + str(epoch) + '_' + str(i) + '.png')
+                            plt.savefig('ex' + str(epoch) + '_' + str(i) + '.png')
 
 
                     send_cross_entropy_to_poor_mans_tensorboard(mse)
@@ -197,7 +200,7 @@ with tf.Session() as sess:
 
     try:
         # Train the autoencoder for 75 epochs
-        vae = train(sess=sess, training_epochs=100)
+        vae = train(sess=sess, training_epochs=3000)
 
         # Initialize all variables
         # sess.run(tf.global_variables_initializer())

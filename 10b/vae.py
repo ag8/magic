@@ -27,7 +27,7 @@ class TangoEncoder(object):
         # Determine network architecture
 
         # The encoder can have as many layers as we want
-        self.encoder_neurons = [500, 500, 500, 500]
+        self.encoder_neurons = [500, 500]
         assert len(self.encoder_neurons) > 0
 
         # The decoder can only have two layers, because
@@ -284,7 +284,7 @@ class TangoEncoder(object):
             #     of an image and the same image, but rotated, need to
             #     be the same--thus, we are forcing transformation
             #     invariance on our latent space.
-            deformation_loss = 10 * tf.reduce_sum(tf.squared_difference(self.z, self.z_representation_of_rotated), 1)
+            deformation_loss = 100 * tf.reduce_sum(tf.squared_difference(self.z, self.z_representation_of_rotated), 1)
             self.d_l = tf.reduce_mean(deformation_loss)
 
             # We add our three losses together, and average over the batch,
