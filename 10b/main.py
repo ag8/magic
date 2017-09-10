@@ -68,10 +68,10 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                 cost, training_loss, rec_loss, lat_loss, def_loss, distance = vae.partial_fit(batch_xs,
                                                                                     overlap_areas=overlap_areas)
 
-                print(("Epoch: " + str(epoch)).ljust(20)),
-                print(("Cost: " + str(cost)).ljust(20)),
-                print(("Training loss: " + str(training_loss).ljust(30))),
-                print(("Distance: " + str(np.mean(distance))).ljust(20))
+                # print(("Epoch: " + str(epoch)).ljust(20)),
+                # print(("Cost: " + str(cost)).ljust(20)),
+                # print(("Training loss: " + str(training_loss).ljust(30))),
+                # print(("Distance: " + str(np.mean(distance))).ljust(20))
 
                 # If the cost is nan, stop training and raise an exception
                 if np.isnan(cost):
@@ -97,7 +97,7 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
 
 
                     # Invert the predictions--since the distance is the inverse
-                    # predictions = 1. / predictions
+                    predictions = 1. / predictions
 
 
                     print("Predictions: " + str(predictions))
@@ -112,14 +112,15 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                                  predictions,
                                  epoch, i, image_hashes, max_overlap)
 
-                    # Send the cross entropy to the logger
-                    send_cross_entropy_to_poor_mans_tensorboard(mse)
-
                 # Compute average loss
                 avg_cost += cost / n_samples * batch_size
                 avg_loss += training_loss / n_samples * batch_size
 
-            print(("Average loss per epoch: " + str(int(avg_loss)) + "").ljust(35, ' '))
+            print(("Epoch: " + str(epoch)).ljust(20)),
+            print(("Average cost: " + str(int(avg_cost)) + "").ljust(35)),
+            print(("Average loss: " + str(int(avg_loss)) + "").ljust(35))
+
+            send_cross_entropy_to_poor_mans_tensorboard(int(avg_loss))
 
     except KeyboardInterrupt:
         pass

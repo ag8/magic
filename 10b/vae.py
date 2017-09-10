@@ -54,14 +54,15 @@ class TangoEncoder(object):
         # during training (usually tanh
         #   or softplus)
         # WAIT except softmax just magically works?!
-        self.transfer_fct = tf.nn.softmax
+        # WAIT NO it doesn't
+        self.transfer_fct = tf.nn.elu
 
         # The learning rates for the two
         # AdamOptimizers. The first learning
         # rate is for the latent space
         # generation; the second is for the
         # metricization of the latent space.
-        self.learning_rates = [1e-4, 1e-2]
+        self.learning_rates = [1e-6, 1e-8]
 
         # The batch size for training
         self.batch_size = FLAGS.BATCH_SIZE
