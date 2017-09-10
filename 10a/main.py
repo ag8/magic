@@ -124,51 +124,51 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60, display_step=5)
 
 
 
-                    # Reshape images
-                    reshaped_images = np.reshape(accuracy_testing_images, newshape=[FLAGS.BATCH_SIZE, FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, FLAGS.NUM_LAYERS])
+                    if i % 13 == 0:  # Every 312 runs seems good
 
-                    ex_lock = reshaped_images[0, :, :, 0]
-                    scipy.misc.imsave("ex_lock.png", ex_lock)
-                    print(np.shape(ex_lock))
-                    print(sum(sum(ex_lock)))
-                    ex_lock_r = reshaped_images[0, :, :, 1]
-                    ex_key = reshaped_images[0, :, :, 2]
+                        # Reshape images
+                        reshaped_images = np.reshape(accuracy_testing_images, newshape=[FLAGS.BATCH_SIZE, FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, FLAGS.NUM_LAYERS])
 
-                    plt.figure(figsize=(8, 12))
-                    # print("x_sample[i] shape: "),
-                    # print(np.shape(x_sample[i]))
-                    # print("")
-                    # print("x_reconstruct[i] shape: ")
-                    # print(np.shape(x_reconstruct[i]))
-                    # print("")
+                        ex_lock = reshaped_images[0, :, :, 0]
+                        scipy.misc.imsave("ex_lock.png", ex_lock)
+                        print(np.shape(ex_lock))
+                        print(sum(sum(ex_lock)))
+                        ex_lock_r = reshaped_images[0, :, :, 1]
+                        ex_key = reshaped_images[0, :, :, 2]
 
-                    plt.subplot(5, 2, 3)
-                    plt.imshow(ex_lock, vmin=0, vmax=1,
-                               cmap="gray")
-                    # plt.imshow(x_sample[i].reshape(200, 200, 1)[:, :, 1], vmin=0, vmax=1, cmap="gray")
-                    plt.title("Lock image")
-                    plt.colorbar()
-                    plt.subplot(5, 2, 4)
-                    # plt.imshow(x_reconstruct[i].reshape(200, 200, FLAGS.NUM_LAYERS)[:, :, 1], vmin=0, vmax=1, cmap="gray")
-                    plt.imshow(ex_key.reshape(200, 200, 1)[:, :, 0], vmin=0, vmax=1, cmap="gray")
-                    plt.title("Key image")
-                    plt.colorbar()
+                        plt.figure(figsize=(8, 12))
+                        # print("x_sample[i] shape: "),
+                        # print(np.shape(x_sample[i]))
+                        # print("")
+                        # print("x_reconstruct[i] shape: ")
+                        # print(np.shape(x_reconstruct[i]))
+                        # print("")
 
-                    plt.subplot(5, 2, 5)
-                    plt.text(0.1, 0.9, "Actual overlap: " + str(accuracy_testing_overlap_areas[0]) + ", predicted overlap: " + str(predictions[0]), fontsize=12)
+                        plt.subplot(5, 2, 3)
+                        plt.imshow(ex_lock, vmin=0, vmax=1,
+                                   cmap="gray")
+                        # plt.imshow(x_sample[i].reshape(200, 200, 1)[:, :, 1], vmin=0, vmax=1, cmap="gray")
+                        plt.title("Lock image")
+                        plt.colorbar()
+                        plt.subplot(5, 2, 4)
+                        # plt.imshow(x_reconstruct[i].reshape(200, 200, FLAGS.NUM_LAYERS)[:, :, 1], vmin=0, vmax=1, cmap="gray")
+                        plt.imshow(ex_key.reshape(200, 200, 1)[:, :, 0], vmin=0, vmax=1, cmap="gray")
+                        plt.title("Key image")
+                        plt.colorbar()
 
-                    print("Ok, guys. Here's the deal.")
-                    print("The overlap index is " + str(max_overlap.index(accuracy_testing_overlap_areas[0])))
-                    print("And the overlap itself is " + str(accuracy_testing_overlap_areas[0]) + ".")
+                        plt.subplot(5, 2, 5)
+                        plt.text(0.1, 0.9, "Actual overlap: " + str(accuracy_testing_overlap_areas[0]) + ", predicted overlap: " + str(predictions[0]), fontsize=12)
 
-                    image_hash = dbu.lock_hash(ex_lock)
-                    image_index = image_hashes.index(image_hash)
-                    print("The image index, on the other hand, is " + str(image_index) + ".")
+                        image_hash = dbu.lock_hash(ex_lock)
+                        image_index = image_hashes.index(image_hash)
+                        label_index = max_overlap.index(accuracy_testing_overlap_areas[0])
 
+                        assert image_index == label_index  # Make sure the image and label batches are shuffled identically
+                        print("Index: " + str(image_index))
 
-                    plt.tight_layout()
+                        plt.tight_layout()
 
-                    plt.savefig('ex' + str(epoch) + '_' + str(i) + '.png')
+                        plt.savefig('ex' + str(epoch) + '_' + str(i) + '.png')
 
 
                     send_cross_entropy_to_poor_mans_tensorboard(mse)
