@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="995a2c6e-f93e-42c9-8740-27a66149c3ec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/main.py" afterPath="$PROJECT_DIR$/shapes/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/utils.py" afterPath="$PROJECT_DIR$/shapes/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/vae.py" afterPath="$PROJECT_DIR$/shapes/vae.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -589,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506184634756</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Something works">
+      <created>1506186084044</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1506186084044</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -639,7 +643,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Fixed image loading&#10;Was loading from RGB, which would break dimensions. Adding channels=1 fixes everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed image loading&#10;Was loading from RGB, which would break dimensions. Adding channels=1 fixes everything" />
+    <MESSAGE value="Something works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Something works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
