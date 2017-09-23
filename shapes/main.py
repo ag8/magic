@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 import scipy.misc
 import time
 
-import overlap_input
 from constants import FLAGS
 from vae import TangoEncoder
 
@@ -20,6 +19,9 @@ from excps import *
 
 from utils import *
 import debugutils as dbu
+
+import PARAMS
+import st5input
 
 
 
@@ -31,11 +33,12 @@ if FLAGS.RUN_INTERMEDIATE_TESTS:
         max_overlap = pickle.load(fp)
         print(max_overlap)
 
-    image_hashes = dbu.generate_lock_hashes(FLAGS.DATA_DIR)
+    # image_hashes = dbu.generate_lock_hashes(FLAGS.DATA_DIR)
 
 
 # Get input data
-images_batch, labels_batch = overlap_input.inputs(normalize=True, reshape=True, rotation=FLAGS.ROTATE)
+# images_batch, labels_batch = overlap_input.inputs(normalize=True, reshape=True, rotation=FLAGS.ROTATE)
+images_batch, labels_batch = st5input.inputs(eval_data=False, data_dir=PARAMS.DATA_DIR, batch_size=FLAGS.BATCH_SIZE)
 n_samples = FLAGS.NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN
 
 
@@ -48,7 +51,9 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
     :param training_epochs: the maximum number of epochs for training
     :return: the autoencoder network.
     """
+    print("Hey1")
     vae = TangoEncoder(sess=sess)
+    print("Burrito1")
 
     try:
         # Training cycle
@@ -63,6 +68,9 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
             for i in range(total_batch):
                 # Get a batch of images and labels
                 batch_xs, overlap_areas = sess.run([images_batch, labels_batch])
+
+                print(np.shape(batch_xs))
+                print(np.shape(overlap_areas))
 
                 # Fit training using batch data
                 cost, training_loss, rec_loss, lat_loss, def_loss, distance = vae.partial_fit(batch_xs,
