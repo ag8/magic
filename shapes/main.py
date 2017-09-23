@@ -69,6 +69,9 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                 # Get a batch of images and labels
                 batch_xs, overlap_areas = sess.run([images_batch, labels_batch])
 
+                # Reshape necessary to fit placeholder size
+                batch_xs = np.reshape(batch_xs, newshape=[FLAGS.BATCH_SIZE, FLAGS.IMAGE_SIZE * FLAGS.IMAGE_SIZE * FLAGS.NUM_LAYERS])
+
                 print(np.shape(batch_xs))
                 print(np.shape(overlap_areas))
 
@@ -100,6 +103,11 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                 # Every 100 steps, evaluate the accuracy
                 if epoch % 10 == 0 and i == 3:
                     accuracy_testing_images, accuracy_testing_overlap_areas = sess.run([images_batch, labels_batch])
+
+                    # Reshape necessary to fit placeholder size
+                    accuracy_testing_images = np.reshape(accuracy_testing_images, newshape=[FLAGS.BATCH_SIZE,
+                                                              FLAGS.IMAGE_SIZE * FLAGS.IMAGE_SIZE * FLAGS.NUM_LAYERS])
+
                     predictions = vae.get_predictions(accuracy_testing_images,
                                                       overlap_areas=accuracy_testing_overlap_areas)
 
@@ -123,7 +131,7 @@ def train(sess, batch_size=FLAGS.BATCH_SIZE, training_epochs=60):
                     # save an example
                     save_example(accuracy_testing_images, accuracy_testing_overlap_areas,
                                  predictions,
-                                 epoch, i, image_hashes, max_overlap)
+                                 epoch, i, max_overlap=max_overlap)
 
                 # Compute average loss
                 avg_cost += cost / n_samples * batch_size

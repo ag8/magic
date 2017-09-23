@@ -346,7 +346,7 @@ def save_example(accuracy_testing_images, accuracy_testing_overlap_areas, predic
     plt.colorbar()
     plt.subplot(5, 2, 4)
     # plt.imshow(x_reconstruct[i].reshape(200, 200, FLAGS.NUM_LAYERS)[:, :, 1], vmin=0, vmax=1, cmap="gray")
-    plt.imshow(ex_key.reshape(200, 200, 1)[:, :, 0], vmin=0, vmax=1, cmap="gray")
+    plt.imshow(ex_key.reshape(FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, 1)[:, :, 0], vmin=0, vmax=1, cmap="gray")
     plt.title("Key image")
     plt.colorbar()
 
@@ -354,19 +354,19 @@ def save_example(accuracy_testing_images, accuracy_testing_overlap_areas, predic
     plt.text(0.1, 0.9, "Actual overlap: " + str(accuracy_testing_overlap_areas[0]) + ", predicted overlap: " + str(
         predictions[0]), fontsize=12)
 
-    image_hash = dbu.lock_hash(ex_lock)
-    image_index = image_hashes.index(image_hash)
-    label_index = max_overlap.index(accuracy_testing_overlap_areas[0])
+    # image_hash = dbu.lock_hash(ex_lock)
+    # image_index = image_hashes.index(image_hash)
+    # label_index = max_overlap.index(accuracy_testing_overlap_areas[0])
 
-    if image_index != label_index:  # Make sure the image and label batches are shuffled identically
+    # if image_index != label_index:  # Make sure the image and label batches are shuffled identically
         # raise ValueError("Indices do not match:  " + str(image_index) + " != " + str(label_index))
-        print("Indices do not match:  " + str(image_index) + " != " + str(label_index))
-    else:
-        print("Index: " + str(image_index))
+        # print("Indices do not match:  " + str(image_index) + " != " + str(label_index))
+    # else:
+    #     print("Index: " + str(image_index))
 
-        plt.tight_layout()
+        # plt.tight_layout()
 
-        plt.savefig('ex' + str(epoch) + '_' + str(i) + '.png')
+        # plt.savefig('ex' + str(epoch) + '_' + str(i) + '.png')
 
 
 def reconstruct_input(x_sample, overlap_areas, vae, filename='foo.png'):
@@ -384,13 +384,13 @@ def reconstruct_input(x_sample, overlap_areas, vae, filename='foo.png'):
         # print("")
 
         plt.subplot(5, 2, 2 * i + 1)
-        plt.imshow(x_sample[i].reshape(200, 200, FLAGS.NUM_LAYERS)[:, :, 0], vmin=0, vmax=1, cmap="gray")
+        plt.imshow(x_sample[i].reshape(FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, FLAGS.NUM_LAYERS)[:, :, 0], vmin=0, vmax=1, cmap="gray")
         # plt.imshow(x_sample[i].reshape(200, 200, 1)[:, :, 1], vmin=0, vmax=1, cmap="gray")
         plt.title("Test input")
         plt.colorbar()
         plt.subplot(5, 2, 2 * i + 2)
         # plt.imshow(x_reconstruct[i].reshape(200, 200, FLAGS.NUM_LAYERS)[:, :, 1], vmin=0, vmax=1, cmap="gray")
-        plt.imshow(x_reconstruct[i].reshape(200, 200, 1)[:, :, 0], vmin=0, vmax=1, cmap="gray")
+        plt.imshow(x_reconstruct[i].reshape(FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, 1)[:, :, 0], vmin=0, vmax=1, cmap="gray")
         plt.title("Reconstruction")
         plt.colorbar()
     plt.tight_layout()
@@ -404,12 +404,12 @@ def sample_latent_space(vae, filename='latent_space_2d_sampling.png'):
         x_values = np.linspace(-3, 3, nx)
         y_values = np.linspace(-3, 3, ny)
 
-        canvas = np.empty((200 * ny, 200 * nx))
+        canvas = np.empty((FLAGS.IMAGE_SIZE * ny, FLAGS.IMAGE_SIZE * nx))
         for i, yi in enumerate(x_values):
             for j, xi in enumerate(y_values):
                 z_mu = np.array([[xi, yi]] * vae.batch_size)
                 x_mean = vae.generate(z_mu)
-                canvas[(nx - i - 1) * 200:(nx - i) * 200, j * 200:(j + 1) * 200] = x_mean[0].reshape(200, 200, 1)[:, :,
+                canvas[(nx - i - 1) * FLAGS.IMAGE_SIZE:(nx - i) * FLAGS.IMAGE_SIZE, j * FLAGS.IMAGE_SIZE:(j + 1) * FLAGS.IMAGE_SIZE] = x_mean[0].reshape(FLAGS.IMAGE_SIZE, FLAGS.IMAGE_SIZE, 1)[:, :,
                                                                                    0]
 
         plt.figure(figsize=(8, 10))

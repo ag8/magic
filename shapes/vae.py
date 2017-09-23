@@ -70,8 +70,8 @@ class TangoEncoder(object):
         # Now, we create a placeholder for
         # the input data, as well as the
         # labels (for metric learning)
-        self.x = tf.placeholder(tf.float32, [None, self.num_input_neurons])
-        self.overlap_areas = tf.placeholder(tf.float32, [None])
+        self.x = tf.placeholder(tf.float32, [FLAGS.BATCH_SIZE, self.num_input_neurons])
+        self.overlap_areas = tf.placeholder(tf.float32, [FLAGS.BATCH_SIZE])
 
         # Now, we build the network architecture
 

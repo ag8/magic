@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="995a2c6e-f93e-42c9-8740-27a66149c3ec" name="Default" comment="Fixed image loading&#10;Was loading from RGB, which would break dimensions. Adding channels=1 fixes everything">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/debugutils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/excps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/overlap_input.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/11a/vae.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/PARAMS.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/debugutils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/excps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/first_part.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/st5input.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapes/vae.py" />
+    <list default="true" id="995a2c6e-f93e-42c9-8740-27a66149c3ec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/10b/main.py" afterPath="$PROJECT_DIR$/10b/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/main.py" afterPath="$PROJECT_DIR$/shapes/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/utils.py" afterPath="$PROJECT_DIR$/shapes/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shapes/vae.py" afterPath="$PROJECT_DIR$/shapes/vae.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shapes/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="72" column="44" lean-forward="false" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+            <state relative-caret-position="539">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#47#57#0" expanded="true" />
               </folding>
@@ -74,16 +56,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vae.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/11a/vae.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="287" column="69" lean-forward="true" selection-start-line="287" selection-start-column="69" selection-end-line="287" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="st5input.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shapes/st5input.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,8 +81,8 @@
       <file leaf-file-name="vae.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shapes/vae.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="348" column="0" lean-forward="true" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="419" column="59" lean-forward="false" selection-start-line="419" selection-start-column="59" selection-end-line="419" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -119,8 +91,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shapes/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8340">
-              <caret line="438" column="7" lean-forward="false" selection-start-line="438" selection-start-column="7" selection-end-line="438" selection-end-column="7" />
+            <state relative-caret-position="739">
+              <caret line="369" column="0" lean-forward="true" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -169,14 +141,21 @@
       <find>, 3</find>
       <find>3</find>
       <find>split</find>
-      <find>global_vari</find>
       <find>threa</find>
+      <find>global_vari</find>
+      <find>placeho</find>
+      <find>sess.run</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/shapes</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Andrew G &lt;andrew2000g@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -209,11 +188,12 @@
         <option value="$PROJECT_DIR$/11a/vae.py" />
         <option value="$PROJECT_DIR$/shapes/PARAMS.py" />
         <option value="$PROJECT_DIR$/shapes/overlap_input.py" />
-        <option value="$PROJECT_DIR$/shapes/vae.py" />
         <option value="$PROJECT_DIR$/shapes/constants.py" />
         <option value="$PROJECT_DIR$/shapes/st5input.py" />
         <option value="$PROJECT_DIR$/shapes/first_part.py" />
+        <option value="$PROJECT_DIR$/shapes/vae.py" />
         <option value="$PROJECT_DIR$/shapes/main.py" />
+        <option value="$PROJECT_DIR$/shapes/utils.py" />
       </list>
     </option>
   </component>
@@ -582,6 +562,12 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SFStoredExecutionPersistentComponent">
+    <executions>
+      <execution name="Default" sourceToExecute="" />
+    </executions>
+    <lastSelectedExecutionName>Default</lastSelectedExecutionName>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -596,6 +582,14 @@
       <option name="presentableId" value="Default" />
       <updated>1504480928357</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed image loading&#10;Was loading from RGB, which would break dimensions. Adding channels=1 fixes everything">
+      <created>1506184634756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506184634756</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -616,18 +610,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25594252" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -643,6 +637,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Fixed image loading&#10;Was loading from RGB, which would break dimensions. Adding channels=1 fixes everything" />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed image loading&#10;Was loading from RGB, which would break dimensions. Adding channels=1 fixes everything" />
   </component>
@@ -848,30 +843,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shapes/overlap_input.py" />
-    <entry file="file://$PROJECT_DIR$/shapes/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8340">
-          <caret line="438" column="7" lean-forward="false" selection-start-line="438" selection-start-column="7" selection-end-line="438" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shapes/PARAMS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shapes/vae.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="348" column="0" lean-forward="true" selection-start-line="348" selection-start-column="0" selection-end-line="348" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/tensorflow/local/lib/python2.7/site-packages/numpy/core/fromnumeric.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -880,10 +851,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/tensorflow/local/lib/python2.7/site-packages/tensorflow/python/ops/gen_image_ops.py">
+    <entry file="file://$PROJECT_DIR$/11a/vae.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="337" column="4" lean-forward="false" selection-start-line="337" selection-start-column="4" selection-end-line="337" selection-end-column="4" />
+        <state relative-caret-position="929">
+          <caret line="291" column="49" lean-forward="true" selection-start-line="291" selection-start-column="49" selection-end-line="291" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shapes/PARAMS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -898,21 +877,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shapes/constants.py">
+    <entry file="file://$USER_HOME$/tensorflow/local/lib/python2.7/site-packages/tensorflow/python/ops/gen_image_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+        <state relative-caret-position="197">
+          <caret line="337" column="4" lean-forward="false" selection-start-line="337" selection-start-column="4" selection-end-line="337" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shapes/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="72" column="44" lean-forward="false" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
-          <folding>
-            <element signature="e#47#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -926,11 +895,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/11a/vae.py">
+    <entry file="file://$PROJECT_DIR$/shapes/constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="287" column="69" lean-forward="true" selection-start-line="287" selection-start-column="69" selection-end-line="287" selection-end-column="69" />
+        <state relative-caret-position="267">
+          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shapes/vae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="419" column="59" lean-forward="false" selection-start-line="419" selection-start-column="59" selection-end-line="419" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shapes/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="369" column="0" lean-forward="true" selection-start-line="369" selection-start-column="0" selection-end-line="369" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shapes/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
