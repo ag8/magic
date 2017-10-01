@@ -178,18 +178,18 @@ with tf.Session() as sess:
         # Train the autoencoder for 75 epochs
         vae = train(sess=sess, training_epochs=3000)
 
-        print("Reconstructing test input..."),
-
-        x_sample, overlap_areas = sess.run([images_batch, labels_batch])
-        reconstruct_input(x_sample, overlap_areas, vae)
-
-        print("Done!")
-
-        print("Sampling 2d latent space..."),
-
-        sample_latent_space(vae)
-
-        print("Done!")
+        # print("Reconstructing test input..."),
+        #
+        # x_sample, overlap_areas = sess.run([images_batch, labels_batch])
+        # reconstruct_input(x_sample, overlap_areas, vae)
+        #
+        # print("Done!")
+        #
+        # print("Sampling 2d latent space..."),
+        #
+        # sample_latent_space(vae)
+        #
+        # print("Done!")
 
     except KeyboardInterrupt:
         print("Good-by!")
