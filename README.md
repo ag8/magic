@@ -5,6 +5,12 @@ as an asymmetric autoencoder, together with five novel losses, to learn a metric
 
 ## Architecture
 
+The architecture is similar to that of an asymmetric autoencoder:
+
+![A magic-style asymmetric autoencoder](https://raw.githubusercontent.com/ag8/magic/master/affinity_magic.png)
+
+However, we also include a deformation penalty and a metric loss. The architecture and the losses are detailed in this brief [paper](https://electronneutrino.com/papers/0000.0003.pdf).
+
 ## Experimental dataset
 
 Here, we conduct experiments with shape-matching datasets
