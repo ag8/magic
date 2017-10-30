@@ -4,13 +4,13 @@ Welcome to the magic autoencoder.
 
 
 
-## Experiment 1
+### Experiment 1
 Experiments 1* are predominantly development experiments.
 Experiments 2 and later will be actual experiments.
 
-## Experiment 2
+### Experiment 2
 
-### Randomly uniformly guessing in range
+#### Randomly uniformly guessing in range
 | Experiment | Min | Max | Avg. squared loss |
 | --- | :---: |:---: | -----:|
 | 2a | 0 | 10000 | 1.9e+7 |
@@ -18,9 +18,9 @@ Experiments 2 and later will be actual experiments.
 | 2c | 350 | 2000 | 2.50e+6 |
 | 2d | 0 | 0 | 5.8e+6 |
 
-## Siamese architecture experiments
+### Siamese architecture experiments
 
-### Dense siamese networks
+#### Dense siamese networks
 | Experiment | Num FC layers after dot product | Squared loss* |
 | --- | :---: | ---: |
 | 6b | 0 | 3.39e-1 |
@@ -31,15 +31,15 @@ Experiments 2 and later will be actual experiments.
 `* - the loss displayed here is the average loss for the last 50
 steps of a 10-epoch training session`
 
-## Sampling tests
+### Sampling tests
 
-### 7d
+#### 7d
 This is without any specific metric space learning; however, we get
 a really cool image if we sample the latent space.
 
 ![Sampling the latent space](https://raw.githubusercontent.com/ag8/magic/master/7d/latent_space_2d_sampling.png)
 
-## Metricization experiments
+### Metricization experiments
 
 | Experiment | Encoder neurons | Latent dimensions | Metric distance | mse (50 epochs) |
 | --- | :---: | --- |--- | ---: |
@@ -50,10 +50,9 @@ a really cool image if we sample the latent space.
 Note: the more latent dimensions, the slower the reconstruction
 seems to be learned
 
-\*\*\*wow ok I just realized that these three experiments were all run
-on the tiny dataset :(\*\*\*
+Note 2: these experiments were run on the small Titan dataset
 
-### 9a
+#### 9a
 
 Distance is `1 over the overlap area`; that is, shapes that are close
 together in latent space overlap really well, while shapes that are far
