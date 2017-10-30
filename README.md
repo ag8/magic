@@ -13,8 +13,22 @@ However, we also include a deformation penalty and a metric loss. The architectu
 
 ## Experimental dataset
 
-Here, we conduct experiments with shape-matching datasets
+Here, we conduct experiments with a shape overlap prediction dataset. This dataset consists of many random shapes, and the pixel value of the maximum posible overlap area between the two shapes.
 
+
+![](https://raw.githubusercontent.com/bigfacebear/MaxOverlap/master/misc/L.png)
+
+![](https://raw.githubusercontent.com/bigfacebear/MaxOverlap/master/misc/K.png)
+
+![](https://raw.githubusercontent.com/bigfacebear/MaxOverlap/master/misc/overlap.png)
+
+
+For more details on generating this dataset, please see [Qiancheng Zhao's github](https://github.com/bigfacebear/MaxOverlap).
+
+
+The advantage of using this dataset for developing our architecture is two-fold: on the one hand, two-dimensional shapes are simpler to work with
+than three-dimensional drugs, and allow us to run experiments faster; on the other hand, this task is still incredibly complex, since we have to predict
+essentially a continuous function, and simpler architectures fail miserably at this task.
 
 
 ## Experiments
