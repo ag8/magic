@@ -37,7 +37,7 @@ steps of a 10-epoch training session`
 This is without any specific metric space learning; however, we get
 a really cool image if we sample the latent space.
 
-![Sampling the latent space](https://raw.githubusercontent.com/affmach/affinity/366ac88d88a00b5e40714113029f1091f949910d/affinity/models/magic_autoencoder/7d/latent_space_2d_sampling.png?token=AJpzLkmFk9F0TFI83hifLoLFFs5fZD51ks5ZlK2nwA%3D%3D)
+![Sampling the latent space](https://raw.githubusercontent.com/ag8/magic/master/7d/latent_space_2d_sampling.png)
 
 ## Metricization experiments
 
@@ -61,7 +61,3 @@ don't overlap well at all. This seems a lot more useful from a sampling
 perspective (like if I have a drug in latent space, I can just sample
 around it to get ligands that have very negative binding energies)
 
-
-Here's the network model we're using to learn the metric space:
-
-![Metric learning model](https://raw.githubusercontent.com/affmach/affinity/master/affinity/models/magic_autoencoder/tango_autoencoder.png?token=AJpzLoQpAkgtx8I7hi83klNzcNbUtqadks5ZldH4wA%3D%3D)
