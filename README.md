@@ -1,8 +1,17 @@
 # magic
 
-Welcome to the magic autoencoder.
+The magic autoencoder is a deep metric learning architecture for predicting binding interactions between molecules. It functions
+as an asymmetric autoencoder, together with five novel losses, to learn a metric over the latent-space represenation of arbitrary data.
+
+## Architecture
+
+## Experimental dataset
+
+Here, we conduct experiments with shape-matching datasets
 
 
+
+## Experiments
 
 ### Experiment 1
 Experiments 1* are predominantly development experiments.
