@@ -11,6 +11,9 @@ The architecture is similar to that of an asymmetric autoencoder:
 
 However, we also include a deformation penalty and a metric loss. The architecture and the losses are detailed in this brief [paper](https://electronneutrino.com/papers/0000.0003.pdf).
 
+![Reconstruction training](https://raw.githubusercontent.com/ag8/magic/master/reconstruction.png)
+![Trained reconstruction](https://raw.githubusercontent.com/ag8/magic/master/reconstruction_perfect.png)
+
 ## Experimental dataset
 
 Here, we conduct experiments with a shape overlap prediction dataset. This dataset consists of many random shapes, and the pixel value of the maximum posible overlap area between the two shapes.
